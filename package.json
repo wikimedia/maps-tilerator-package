@@ -1,0 +1,102 @@
+{
+  "name": "tilerator-package",
+  "version": "0.0.1",
+  "description": "Map tiles pre-generation service - packaging for WMF",
+  "main": "./app.js",
+  "scripts": {
+    "start": "service-runner",
+    "test": "mocha",
+    "docker-start": "service-runner docker-start",
+    "docker-test": "service-runner docker-test",
+    "coverage": "istanbul cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gerrit.wikimedia.org/r/maps/tilerator/package"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "service template",
+    "MediaWiki"
+  ],
+  "author": "Guillaume Lederrey <gehel@wikimedia.org>",
+  "contributors": [
+    "Paul Norman <pnorman@wikimedia.org>"
+  ],
+  "license": "Apache-2.0",
+  "bugs": "https://github.com/kartotherian/tilerator/issues",
+  "homepage": "https://github.com/kartotherian/tilerator",
+  "kartotherian": {
+    "registerSourceLibs": [
+      "tilelive-bridge",
+      "tilelive-vector",
+      "@kartotherian/autogen",
+      "@kartotherian/cassandra",
+      "@kartotherian/demultiplexer",
+      "@kartotherian/layermixer",
+      "@kartotherian/overzoom",
+      "@kartotherian/postgres",
+      "@kartotherian/substantial"
+    ]
+  },
+  "dependencies": {
+    "kartotherian": "git+https://github.com/kartotherian/tilerator.git#master",
+    "service-runner": "^2.4.6"
+  },
+  "optionalDependencies": {
+    "bunyan-prettystream": "*"
+  },
+  "devDependencies": {
+    "extend": "^3.0.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^3.2.0",
+    "mocha-jshint": "^2.3.1",
+    "mocha-lcov-reporter": "^1.2.0",
+    "swagger-router": "^0.4.2"
+  },
+  "deploy": {
+    "node": "6.9.1",
+    "target": "debian",
+    "install_opts": [
+      "--build-from-source=mapnik",
+      "--fallback-to-build=false"
+    ],
+    "dependencies": {
+      "_all": [
+        "libcairo2-dev",
+        "libgif-dev",
+        "libpango1.0-dev"
+      ],
+      "ubuntu": [
+        "libjpeg62-dev"
+      ],
+      "debian": [
+        "libjpeg62-turbo-dev",
+        "fonts-dejavu",
+        "libboost-filesystem-dev",
+        "libboost-program-options-dev",
+        "libboost-regex-dev",
+        "libboost-system-dev",
+        "libboost-thread-dev",
+        "libgdal-dev",
+        "libicu-dev",
+        "libpq-dev",
+        "libcurl4-gnutls-dev",
+        "libproj-dev",
+        "libtiff-dev",
+        "libwebp5",
+        {
+          "repo_url": "https://apt.wikimedia.org/wikimedia",
+          "release": "jessie-wikimedia",
+          "pool": "backports",
+          "packages": [
+            "libmapbox-variant-dev",
+            "libmapnik-dev",
+            "mapnik-utils"
+          ]
+        }
+      ]
+    }
+  }
+}
