@@ -44,7 +44,7 @@
     "tilerator": "git+https://github.com/kartotherian/tilerator.git#master",
     "@kartotherian/meddo": "kartotherian/meddo#master",
     "@kartotherian/brighmed": "kartotherian/brighmed#master",
-    "@kartotherian/cleartables": "ClearTables/ClearTables#v0.0.15.wikidata",
+    "@kartotherian/cleartables": "ClearTables/ClearTables#wm",
     "service-runner": "^2.4.6"
   },
   "optionalDependencies": {
