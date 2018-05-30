@@ -67,38 +67,7 @@
     ],
     "dependencies": {
       "_all": [
-        "libcairo2-dev",
-        "libgif-dev",
-        "libpango1.0-dev"
-      ],
-      "ubuntu": [
-        "libjpeg62-dev"
-      ],
-      "debian": [
-        "libjpeg62-turbo-dev",
-        "fonts-dejavu",
-        "libboost-filesystem-dev",
-        "libboost-program-options-dev",
-        "libboost-regex-dev",
-        "libboost-system-dev",
-        "libboost-thread-dev",
-        "libgdal-dev",
-        "libicu-dev",
-        "libpq-dev",
-        "libcurl4-gnutls-dev",
-        "libproj-dev",
-        "libtiff-dev",
-        "libwebp5",
-        {
-          "repo_url": "https://apt.wikimedia.org/wikimedia",
-          "release": "jessie-wikimedia",
-          "pool": "backports",
-          "packages": [
-            "libmapbox-variant-dev",
-            "libmapnik-dev",
-            "mapnik-utils"
-          ]
-        }
+        "libmapnik-dev"
       ]
     }
   }
