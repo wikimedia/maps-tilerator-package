@@ -1,6 +1,6 @@
 {
   "name": "tilerator-package",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Map tiles pre-generation service - packaging for WMF",
   "main": "./app.js",
   "scripts": {
@@ -45,18 +45,18 @@
     "@kartotherian/meddo": "kartotherian/meddo#master",
     "@kartotherian/brighmed": "kartotherian/brighmed#master",
     "@kartotherian/cleartables": "ClearTables/ClearTables#wm",
-    "service-runner": "^2.4.6"
+    "service-runner": "^2.6.4"
   },
   "optionalDependencies": {
     "bunyan-prettystream": "*"
   },
   "devDependencies": {
     "extend": "^3.0.0",
-    "istanbul": "^0.4.3",
-    "mocha": "^3.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.4",
     "mocha-jshint": "^2.3.1",
-    "mocha-lcov-reporter": "^1.2.0",
-    "swagger-router": "^0.4.2"
+    "mocha-lcov-reporter": "^1.3.0",
+    "swagger-router": "^0.5.6"
   },
   "deploy": {
     "node": "6.11.1",
@@ -67,7 +67,33 @@
     ],
     "dependencies": {
       "_all": [
-        "libmapnik-dev"
+        "fonts-dejavu",
+        "libboost-filesystem-dev",
+        "libboost-regex-dev",
+        "libboost-system-dev",
+        "libcairo2-dev",
+        "libfreetype6-dev",
+        "libgdal-dev",
+        "libharfbuzz-dev",
+        "libjpeg-dev",
+        "libpng-dev",
+        "libpq-dev",
+        "libproj-dev",
+        "libtiff-dev",
+        "libwebp-dev",
+        "libxml2-dev",
+        "libmapbox-variant-dev",
+        "libboost-program-options-dev",
+        "libboost-thread-dev",
+        {
+          "repo_url": "https://apt.wikimedia.org/wikimedia",
+          "release": "stretch-wikimedia",
+          "pool": "main",
+          "packages": [
+            "libmapnik-dev",
+            "libmapnik3.0"
+          ]
+        }
       ]
     }
   }
