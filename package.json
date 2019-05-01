@@ -41,11 +41,11 @@
     ]
   },
   "dependencies": {
-    "tilerator": "git+https://github.com/kartotherian/tilerator.git#master",
+    "@opentesseract/tilerator": "1.1.3-alpha.0",
     "@kartotherian/meddo": "kartotherian/meddo#master",
     "@kartotherian/brighmed": "kartotherian/brighmed#master",
     "@kartotherian/cleartables": "ClearTables/ClearTables#wm",
-    "service-runner": "^2.6.4"
+    "service-runner": "^2.6.13"
   },
   "optionalDependencies": {
     "bunyan-prettystream": "*"
@@ -59,11 +59,10 @@
     "swagger-router": "^0.5.6"
   },
   "deploy": {
-    "node": "6.11.1",
+    "node": "10.15.2",
     "target": "debian",
     "install_opts": [
-      "--build-from-source=mapnik",
-      "--fallback-to-build=false"
+      "--build-from-source=@kartotherian/mapnik"
     ],
     "dependencies": {
       "_all": [
@@ -91,6 +90,8 @@
           "pool": "main",
           "packages": [
             "libmapnik-dev",
+            "mapnik-utils",
+            "mapnik-doc",
             "libmapnik3.0"
           ]
         }
