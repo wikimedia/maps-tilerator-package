@@ -41,7 +41,7 @@
     ]
   },
   "dependencies": {
-    "@opentesseract/tilerator": "1.1.3-alpha.0",
+    "@kartotherian/tilerator": "1.1.3-alpha.0",
     "@kartotherian/meddo": "kartotherian/meddo#master",
     "@kartotherian/brighmed": "kartotherian/brighmed#master",
     "@kartotherian/cleartables": "ClearTables/ClearTables#wm",
