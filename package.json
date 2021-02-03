@@ -64,7 +64,7 @@
   },
   "deploy": {
     "node": "10.15.2",
-    "target": "debian:stretch",
+    "target": "debian:buster",
     "install_opts": [
       "--build-from-source=@kartotherian/mapnik"
     ],
@@ -88,17 +88,10 @@
         "libmapbox-variant-dev",
         "libboost-program-options-dev",
         "libboost-thread-dev",
-        {
-          "repo_url": "https://apt.wikimedia.org/wikimedia",
-          "release": "stretch-wikimedia",
-          "pool": "main",
-          "packages": [
-            "libmapnik-dev",
-            "mapnik-utils",
-            "mapnik-doc",
-            "libmapnik3.0"
-          ]
-        }
+        "libmapnik-dev",
+        "mapnik-utils",
+        "mapnik-doc",
+        "libmapnik3.0"
       ]
     }
   }
