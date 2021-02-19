@@ -63,7 +63,7 @@
     "swagger-router": "^0.5.6"
   },
   "deploy": {
-    "node": "10.15.2",
+    "node": "10.23.1",
     "target": "debian:buster",
     "install_opts": [
       "--build-from-source=@kartotherian/mapnik"
