@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@wikimedia/tilerator": "1.1.7-beta.3",
-    "service-runner": "^2.8.1"
+    "service-runner": "^2.8.3"
   },
   "optionalDependencies": {
     "bunyan-prettystream": "*"
