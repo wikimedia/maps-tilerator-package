@@ -41,7 +41,7 @@
     ]
   },
   "dependencies": {
-    "@wikimedia/tilerator": "1.1.7-beta.5",
+    "@wikimedia/tilerator": "1.1.7-beta.6",
     "service-runner": "^2.8.4"
   },
   "optionalDependencies": {
